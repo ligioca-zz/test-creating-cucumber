@@ -1,13 +1,13 @@
 package pages;
 
-import base.Controller;
+import base.BaseUtil;
 import org.openqa.selenium.WebDriver;
 
 public class HomePage {
 
     WebDriver driver;
 
-    public HomePage(Controller controller) {
-        driver = controller.getDriver();
+    public HomePage(BaseUtil base) {
+        driver = base.getDriver();
     }
 }

@@ -1,26 +1,14 @@
 package steps;
 
 import base.BaseUtil;
-import base.Controller;
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
-import pages.HomePage;
 
 import java.util.List;
 
-public class LoginSteps {
-
-    private BaseUtil baseUtil;
-    Controller controller;
-    HomePage homepage;
-
-    public LoginSteps(Controller controller) {
-        this.controller = controller;
-        homepage = new HomePage(this.controller);
-    }
+public class ExampleLoginSteps extends BaseUtil{
 
     @And("^I click login button$")
     public void iClickLoginButton() throws Throwable {
@@ -28,7 +16,8 @@ public class LoginSteps {
 
     @Given("^I navigate to the ExecuteAutomation website$")
     public void iNavigateToTheExecuteAutomationWebsite() throws Throwable {
-        controller.getDriver().get("http://www.google.com");
+        System.out.println("Open GOOGLE");
+        driver.get("https://www.google.com/");
     }
 
 
